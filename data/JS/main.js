@@ -73,23 +73,28 @@ function olderThan18() {
 		write("There might or might not be a jumpscare somewhere");
 		var goOn = prompt("Do you still want to continue?");
 		if(goOn == "yes") {
+			console.log("Wants to continue");
 			write("Ok... What's 9 + 10?");
-			var question = prompt("What's 9 + 10?")
+			var question = prompt("What's 9 + 10?");
 			if (question == 21) {
 				document.body.style.backgroundImage = "url('data/Images/21')";
 				document.body.style.color = '#FFFFFF';
 				write("Good job, very funny");
 			} else if (question == 19) {
-				write("GG, nice, that's an easy one")
+				console.log("Question answered right");
+				write("GG, nice, that's an easy one");
 				var secondQuestion = prompt("Want another one? (yes/no)");
 				if(secondQuestion == "yes") {
+					console.log("Spoiler: you died");
 					write("This one is more difficult");
 					thirdQuestion = prompt("What's 2̷̧͉̻̦̭͆͆̽͋͋͂1̶̛̬̓̓̽͆͆3̷̞̗̮͚͎͈̙̰̬̱́͊̑̂9̵̡̛̰̙̳̲̪̇̈́̈́̔̎̽̃̔ * 5̸̡̩̰̘̫͒͊͐̆̀̓͘6̸̘̫̺͖̻͎̌̅̄̈́̌́́͑͛̕3̷̢̢̤̰͐͊̓̆͒́͆͜");
 					setInterval(no, 5);
 				} else if(secondQuestion == "no") {
+					console.log("won");
 					write("Congrats, you won, the page will reload soon");
 				}
 			} else {
+				console.log("Question answered wrong");
 				setInterval(no, 10);
 			}
 		} else {
